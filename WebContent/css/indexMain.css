@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
+a {
+	color: inherit;
+	text-decoration: none
+}
+
+body,html {
+	overflow: hidden;
+	height: 100%;
+	font-size: 16px;
+	font-family: montserrat,sans-serif;
+	background: #AAAAAA;
+	color: #000000;
+}
+
+body{
+	background-image:url(../images/index/default.jpg);	
+}
+
+#wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 150%;
+	height: 100%;
+	display: flex;
+	align-items: stretch;
+	margin: 0 25%
+}
+
+.hb {
+	position: relative;
+	width: 25%;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+	trasnform: scale(.97)
+}
+
+.c {
+	position: relative;
+	display: block;
+	max-width: 90%
+}
+
+.c img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+	border-radius:25px;
+	box-shadow:15px 15px 15px rgba(0,0,0,.4);
+}
+
+.txt {
+	position: absolute;
+	top: 100%;
+	left: 10%;
+	width: 80%;
+	opacity: 0;
+	padding: 1em 0 0 1em;
+	border-left: 1px solid;
+	z-index: 1;
+	transform: scaleY(1) translateY(-50px);
+	transition: transform .2s,opacity .5s;
+	-webkit-text-stroke-width:0.2px;
+	-webkit-text-stroke-color:#EEEEEE;	
+	font-size: 25px;
+	font-weight: 500;
+	text-shadow: 4px 4px 8px #333333;
+}
+
+h1 {
+	font-size: 32px;
+	text-transform: uppercase
+	-webkit-text-stroke-width:0.1px;
+	-webkit-text-stroke-color:#EEEEEE;
+	text-shadow: 4px 4px 8px #333333;
+}
+
+.hb:hover .txt {
+	opacity: 1;
+	transform: scaleY(1) translateY(0);	
+}
+
+.fullBg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: transform .5s,opacity .5s;
+	transform: scale(1);
+	z-index: 1;
+}
+
+.fullBg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	opacity: 0.6
+}
+
+.hb:hover+.fullBg {
+	opacity: 1;
+	transform: scale(1.02)
+}
+
+.credits {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1.5em;
+	font-size: .8em;
+	text-align: right;
+	font-style: italic;
+	opacity: .8;
+	transition: opacity .2;
+	z-index: 3
+}
+
+.credits:hover {
+	text-decoration: underline;
+	opacity: 1
+}
+
+.topInfoBar{
+	z-index: 512;
+	background-color:#000000;
+	height:68px;
+	line-height:48px;
+	width:100%;	
+}
+
+.topInfoBar button{
+	z-index: 512;
+	border-radius:5px;	
+	height:36;
+	width:64;
+	border:solid 1px #000000; 
+	position:relative;
+	float:right;
+	color:white;
+	cursor:pointer;
+}
+
+.topInfoBar #login{
+	background-color:#3b63f9;
+	margin: 4px 5px 0px 5px;
+}
+
+.topInfoBar #regist{
+	background-color:#ca0707;
+	margin: 6px 5px 0px 5px;
+}
+
+.topInfoBar #inspector{
+	background-color:#23974C;
+	margin: 6px 5px 0px 5px;
+}

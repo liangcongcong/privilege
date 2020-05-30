@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>privilege</display-name>
+	<!-- spring config -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:/applicationContext.xml
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>spring.profiles.default</param-name>
+		<param-value>production</param-value>
+	</context-param>
+	<!-- listeners -->
+	<listener>
+		<listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.jboss.resteasy.plugins.spring.SpringContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- resteasy config -->
+	<context-param>
+		<param-name>resteasy.resources</param-name>
+		<param-value>
+			restful.api.ProjectAPI,
+			restful.api.RoleAPI,
+			restful.api.RoleFieldAPI,
+			
+			restful.api.ApplicationAPI,
+			restful.api.UserAPI,
+			
+			restful.api.EndTypeAPI,
+			restful.api.OperatorAPI,
+			restful.api.LinkAPI,
+			
+			restful.api.RequestAPI
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>resteasy.providers</param-name>
+		<param-value>
+			restful.filter.RequestFilter
+        </param-value>
+	</context-param>
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/</param-value>
+	</context-param>
+	<!-- resteasy servlet  -->
+	<servlet>
+		<servlet-name>resteasy</servlet-name>
+		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>resteasy</servlet-name>
+		<url-pattern>/request/*</url-pattern>
+		<url-pattern>/manage/*</url-pattern>
+	</servlet-mapping>
+	<!-- web filter -->
+	<filter>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<filter-class>zea.web.filter.SetCharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- default page -->
+	<welcome-file-list>
+		<welcome-file>jsp/login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

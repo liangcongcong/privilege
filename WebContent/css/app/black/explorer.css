@@ -1,0 +1,73 @@
+body {
+	background-color: #39414A;
+	color: white;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: smaller;
+	background-image: url("images/explorer.png");
+	background-repeat: repeat-x;
+}
+
+div#explorer {
+	height: 95%;
+	width: 95%;
+	
+}
+
+ul.fancytree-container img{
+	vertical-align:middle;	
+}
+
+ul.fancytree-container {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: transparent;
+}
+span.fancytree-node span.fancytree-title {
+	height:16px;
+	line-height:16px;	
+	font-size:12px;
+	color: white;
+	text-decoration: none;
+	font-family:"Microsoft YaHei";
+	vertical-align:middle;
+}
+span.fancytree-focused span.fancytree-title {
+	outline-color: white;
+}
+span.fancytree-node:hover span.fancytree-title,
+span.fancytree-active span.fancytree-title,
+span.fancytree-active.fancytree-focused span.fancytree-title,
+.fancytree-treefocus span.fancytree-title:hover,
+.fancytree-treefocus span.fancytree-active span.fancytree-title {
+	color: #39414A;
+}
+
+/* Remove system outline for focused container */
+.ui-fancytree.fancytree-container:focus {
+	outline: none;
+}
+.ui-fancytree.fancytree-container {
+	border: none;
+}
+
+div#fileContrainer{
+	 width:64px;
+	 margin:20px;
+	 display:inline-block;
+}
+
+div#fileContrainer #fileIcon{
+	 width:64px;
+	 cursor:pointer;
+}
+
+div#fileContrainer #fileDescription{
+	 width:100%;
+	 text-align:center;
+}
+
+div#dialogShowResource #content{
+	margin:0px;
+	padding:0px;
+}

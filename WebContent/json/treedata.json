@@ -1,0 +1,80 @@
+﻿[{
+	"id":1,
+	"text":"系统菜单",
+	"iconCls":"icon-page",   "这是注释(注意逗号)":"自定义tree图标",
+	"children":[{
+		"id":11,
+		"text":"项目管理",
+		"iconCls":"icon-page", "这是注释(注意逗号)":"自定义tree图标",
+		"children":[{
+			"id":111,
+			"text":"项目清单",
+			"iconCls":"icon-page",
+			"page":"module/project.jsp",  "这是注释(注意逗号)":"自定义点击的目标页面"
+		},{
+			"id":112,
+			"text":"项目角色",
+			"page":"module/role.jsp",  "这是注释(注意逗号)":"自定义点击的目标页面"
+		},{
+			"id":113,
+			"text":"项目角色属性管理",
+			"page":"module/roleField.jsp"
+		}]
+	},{
+		"id":12,
+		"text":"权限管理",
+		"iconCls":"icon-page", 
+		"children":[{
+			"id":121,
+			"text":"角色基本权限"
+		},{
+			"id":122,
+			"text":"角色行权限"
+		},{
+			"id":123,
+			"text":"角色列权限"
+		}]
+	},{
+		"id":13,
+		"text":"应用授权",
+		"iconCls":"icon-page", 
+		"children":[{
+			"id":131,
+			"text":"外部应用授权",
+			"page":"module/application.jsp"
+		},{
+			"id":132,
+			"text":"内部应用授权",
+			"page":"module/user.jsp"
+		}]
+	},{
+		"id":14,
+		"text":"基本信息管理",
+		"iconCls":"icon-page", 
+		"children":[{
+			"id":141,
+			"text":"实体类管理",
+			"page":"module/class2.jsp"
+		},{
+			"id":142,
+			"text":"递归终止符管理",
+			"page":"module/endType.jsp"
+		},
+		{
+			"id":143,
+			"text":"运算符管理",
+			"page":"module/operator.jsp"
+		},
+		{
+			"id":144,
+			"text":"条件连接符管理",
+			"page":"module/link.jsp"
+		},
+		{
+			"id":145,
+			"text":"上传jar文件",
+			"page":"module/uploadFile.jsp"
+		}]
+	}]
+}]
+
